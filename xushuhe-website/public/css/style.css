@@ -1,0 +1,231 @@
+/* reset & base - 极简风格，无任何卡通元素 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5f5f5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    color: #1e2a3a;
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    padding: 2rem;
+}
+
+/* 头部 */
+.site-header {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #eaeef2;
+}
+.domain {
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    color: #4a5c6c;
+}
+
+/* 三模块网格布局 */
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 1rem 0 1.5rem;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #eef2f5;
+    padding: 1.5rem;
+    transition: box-shadow 0.2s ease;
+}
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.3px;
+    color: #1f2f3a;
+    border-left: 3px solid #9aaebf;
+    padding-left: 0.75rem;
+}
+
+/* 留言表单 */
+.add-message-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.8rem;
+}
+.add-message-form input,
+.add-message-form textarea {
+    padding: 0.7rem 1rem;
+    border: 1px solid #dce5ea;
+    border-radius: 14px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    background: #fff;
+    transition: 0.2s;
+}
+.add-message-form input:focus,
+.add-message-form textarea:focus {
+    outline: none;
+    border-color: #8aa0ae;
+    box-shadow: 0 0 0 2px rgba(138, 160, 174, 0.1);
+}
+.btn-submit {
+    background: #2c3e44;
+    color: white;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 40px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-size: 0.9rem;
+}
+.btn-submit:hover {
+    background: #1f2e35;
+}
+.btn-edit {
+    background: none;
+    border: 1px solid #cbdbe0;
+    padding: 0.2rem 0.7rem;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    cursor: pointer;
+    color: #4f6f7f;
+    transition: 0.1s;
+}
+.btn-edit:hover {
+    background: #f0f4f7;
+    border-color: #8aa0ae;
+}
+
+/* 留言列表样式 */
+.messages-list {
+    max-height: 460px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.message-item {
+    background: #fafcfd;
+    border-radius: 16px;
+    padding: 1rem;
+    border: 1px solid #edf2f5;
+}
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.4rem;
+}
+.message-nickname {
+    font-weight: 600;
+    color: #2c3e44;
+    font-size: 0.9rem;
+}
+.message-time {
+    font-size: 0.7rem;
+    color: #8e9eab;
+}
+.message-content {
+    margin: 0.5rem 0 0.6rem;
+    word-break: break-word;
+    font-size: 0.9rem;
+    color: #1e2a38;
+    line-height: 1.45;
+}
+.message-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+.loading-placeholder,
+.empty-placeholder {
+    text-align: center;
+    padding: 2rem;
+    color: #8ba0ae;
+    font-size: 0.85rem;
+}
+/* 编辑留言内嵌表单 */
+.edit-form {
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px dashed #e2e9ef;
+}
+.edit-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 12px;
+    border: 1px solid #ccdae2;
+    font-size: 0.85rem;
+    font-family: inherit;
+}
+.edit-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+.edit-actions button {
+    background: none;
+    border: 1px solid #cbd5e1;
+    border-radius: 20px;
+    padding: 0.2rem 1rem;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+.save-edit {
+    background: #2c3e44 !important;
+    color: white;
+    border-color: #2c3e44 !important;
+}
+.cancel-edit {
+    background: white;
+}
+
+/* 个人简介 & 联系方式 占位样式（完全可编辑文案） */
+.bio-content, .contact-content {
+    font-size: 0.95rem;
+    color: #2e445e;
+    line-height: 1.6;
+}
+.placeholder-text {
+    color: #b7c9d4;
+    font-style: normal;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eef2f5;
+    font-size: 0.7rem;
+    color: #9cafbb;
+}
+
+/* 响应式微调 */
+@media (max-width: 740px) {
+    .container {
+        padding: 1.2rem;
+    }
+    .card {
+        padding: 1.2rem;
+    }
+}

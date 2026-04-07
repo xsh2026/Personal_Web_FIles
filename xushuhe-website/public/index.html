@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>徐书和 | 个人主页</title>
+        <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <header class="site-header">
+            <div class="domain">www.xushuhe.com</div>
+        </header>
+
+        <!-- 三大模块网格布局 -->
+        <div class="modules-grid">
+            <!-- 模块1：朋友留言（核心交互区） -->
+            <section class="card module-messages">
+                <h2 class="card-title">朋友留言</h2>
+                <!-- 新增留言表单 -->
+                <div class="add-message-form">
+                    <input type="text" id="msgNickname" placeholder="昵称" autocomplete="off">
+                    <textarea id="msgContent" rows="2" placeholder="留言内容"></textarea>
+                    <input type="password" id="msgPassword" placeholder="编辑密码（用于后续修改留言）" autocomplete="off">
+                    <button id="submitMessageBtn" class="btn-submit">发布留言</button>
+                </div>
+                <!-- 留言列表展示区 -->
+                <div id="messagesList" class="messages-list">
+                    <!-- 动态渲染留言列表 -->
+                    <div class="loading-placeholder">加载留言中...</div>
+                </div>
+            </section>
+
+            <!-- 模块2：个人简介（文案由您自行填写） -->
+            <section class="card module-bio">
+                <h2 class="card-title">个人简介</h2>
+                <div class="bio-content editable-placeholder">
+                    <!-- 留空给用户自定义文案，这里只保留占位说明，不塞入多余内容 -->
+                    <p class="placeholder-text">（在此撰写个人简介）</p >
+                </div>
+            </section>
+
+            <!-- 模块3：联系方式（文案由您自行填写） -->
+            <section class="card module-contact">
+                <h2 class="card-title">联系方式</h2>
+                <div class="contact-content editable-placeholder">
+                    <p class="placeholder-text">（在此添加联系方式，如邮箱、社交账号等）</p >
+                </div>
+            </section>
+        </div>
+
+        <!-- 极简页脚，无冗余文案 -->
+        <footer class="site-footer">
+            <span>©</span>
+        </footer>
+    </div>
+
+    <!-- 引入前端逻辑 JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

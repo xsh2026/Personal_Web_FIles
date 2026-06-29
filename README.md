@@ -278,14 +278,12 @@ npx nodemon server.js
 
 ---
 
-## 📄 许可证
-
-MIT License · Copyright © 2025 徐书和
+## 
 
 ---
 
 <div align="center">
 
-🦞 **咕咕嘎嘎 · 热爱技术与龙虾哲学 · 探索代码的无限可能**
+**咕咕嘎嘎 · 热爱技术与龙虾 · 探索代码的无限可能**
 
 </div>

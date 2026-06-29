@@ -9,7 +9,6 @@
 [![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=flat&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
 [![Express](https://img.shields.io/badge/Express-4.18-000000?style=flat&logo=express&logoColor=white)](https://expressjs.com/)
 [![SQLite](https://img.shields.io/badge/SQLite-3-003B57?style=flat&logo=sqlite&logoColor=white)](https://www.sqlite.org/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat)](LICENSE)
 
 </div>
 
@@ -24,7 +23,7 @@
 - 脏话自动过滤
 - 速率限制：5 次/分钟
 
-### 🦞 龙虾 AI 公开对话
+###  龙虾 AI 公开对话
 - 类 ChatGPT 的 AI 对话界面
 - 服务端会话记忆（SQLite 持久化，刷新不丢失）
 - 支持文件上传分析（`.txt` `.csv` `.json` `.pdf` `.docx` `.xlsx` 等）
